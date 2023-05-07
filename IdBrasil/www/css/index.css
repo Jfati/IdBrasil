@@ -1,0 +1,88 @@
+.img_logo {
+    transform: translate(-50%, -50%);
+    animation: pulse 1s infinite;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    justify-items: center;
+}
+
+.img_logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.custom-loader {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background:
+        radial-gradient(farthest-side, #3715CE 95%, #0000) 50% 1px/6px 6px no-repeat,
+        radial-gradient(farthest-side, #0000 calc(100% - 14px), #D1D1D9 0);
+    animation: s9 4s infinite linear;
+}
+
+@keyframes s9 {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+a{
+    color: black !important;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#app{
+    z-index: 0;
+}
+
+.content_iframe{
+    border-style: none !important;
+background: white;
+}
+
+.img-content{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.img_result_deputado{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+td{
+    padding-right: 10px;
+    border: 1px solid black
+}
+
+.navbar{
+    background: green !important;
+}

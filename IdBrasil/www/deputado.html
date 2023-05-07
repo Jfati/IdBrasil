@@ -1,0 +1,335 @@
+<div id="app">
+
+    <div class="statusbar"></div>
+    <div class="view view-main">
+        <div data-name="deputado" class="page">
+            <div class="navbar navbar-transparent">
+
+                <div class="navbar-inner sliding">
+                    <div class="left">
+                        <a href="#" class="link back">
+                            <i class="material-icons">arrow_back</i>
+                        </a>
+
+                    </div>
+                    <div class="title">Deputado</div>
+                </div>
+            </div>
+            <div class="page-content ptr-content" style="background:#e6e6e6">
+                <div class="ptr-preloader">
+                    <div class="preloader"></div>
+                    <div class="ptr-arrow"></div>
+                </div>
+
+
+                <!-- ajustar grid centro framework7 -->
+                <div class="block text-align-center justify-content-center">
+                    <img id="img_deputado" src="" style="height: 250px;
+                    border-radius: 10px;">
+                </div>
+
+                <div class="block block-strong block-outline-ios">
+                    <div class="grid grid-cols-3 grid-gap">
+                        <a class="button button-outline link"  id="btt_despesas">Despesas</a>
+                        <a class="button button-outline link"  id="btt_profissao">Profissão</a>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="block-title">Informações do Deputado</div>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Nome Civil:</div>
+                                        <div class="item-after" id="nomeCivil"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Nome:</div>
+                                        <div class="item-after" id="nome"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Nome Eleitoral:</div>
+                                        <div class="item-after" id="nomeEleitoral"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Partido:</div>
+                                        <div class="item-after" id="siglaPartido"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">UF:</div>
+                                        <div class="item-after" id="siglaUf"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Id da Legislatura:</div>
+                                        <div class="item-after" id="idLegislatura"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Email:</div>
+                                        <div class="item-after" id="email"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Data de registro:</div>
+                                        <div class="item-after" id="data"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Situacao:</div>
+                                        <div class="item-after" id="situacao"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Condição Eleitoral:</div>
+                                        <div class="item-after" id="condicaoEleitoral"></div>
+                                    </div>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="block-title">Informações do Gabinete</div>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Nome:</div>
+                                        <div class="item-after" id="nome_gabinete"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Predio:</div>
+                                        <div class="item-after" id="gabinete_predio"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Andar:</div>
+                                        <div class="item-after" id="gabinete_andar"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Sala:</div>
+                                        <div class="item-after" id="gabinete_sala"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Telefone:</div>
+                                        <div class="item-after" id="gabinete_telefone"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Email:</div>
+                                        <div class="item-after" id="gabinete_email"></div>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="block-title">Informações do Pesoais</div>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">CPF:</div>
+                                        <div class="item-after" id="cpf"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Sexo:</div>
+                                        <div class="item-after" id="sexo"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Data Nascimento:</div>
+                                        <div class="item-after" id="dataNascimento"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Data Falecimento:</div>
+                                        <div class="item-after" id="dataFalecimento"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Uf Nascimento:</div>
+                                        <div class="item-after" id="ufNascimento"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Municipio Nascimento:</div>
+                                        <div class="item-after" id="municipioNascimento"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">Escolaridade:</div>
+                                        <div class="item-after" id="escolaridade"></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="div_redesocial">
+                        <div class="block-title">Redes Sociais</div>
+                        <div class="list">
+                            <ul id="redesSocial" style="gap: 10px;
+                        display: grid;">
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    /*
+<xml>
+<dados>
+<id>204379</id>
+<uri>
+https://dadosabertos.camara.leg.br/api/v2/deputados/204379
+</uri>
+<nomeCivil>ACÁCIO DA SILVA FAVACHO NETO</nomeCivil>
+<ultimoStatus>
+<id>204379</id>
+<uri>
+https://dadosabertos.camara.leg.br/api/v2/deputados/204379
+</uri>
+<nome>Acácio Favacho</nome>
+<siglaPartido>MDB</siglaPartido>
+<uriPartido>
+https://dadosabertos.camara.leg.br/api/v2/partidos/36899
+</uriPartido>
+<siglaUf>AP</siglaUf>
+<idLegislatura>57</idLegislatura>
+<urlFoto>
+https://www.camara.leg.br/internet/deputado/bandep/204379.jpg
+</urlFoto>
+<email>dep.acaciofavacho@camara.leg.br</email>
+<data>2023-02-01T12:05</data>
+<nomeEleitoral>Acácio Favacho</nomeEleitoral>
+<gabinete>
+<nome>414</nome>
+<predio>4</predio>
+<sala>414</sala>
+<andar>4</andar>
+<telefone>3215-5414</telefone>
+<email>dep.acaciofavacho@camara.leg.br</email>
+</gabinete>
+<situacao>Exercício</situacao>
+<condicaoEleitoral>Titular</condicaoEleitoral>
+<descricaoStatus/>
+</ultimoStatus>
+<cpf>74287028287</cpf>
+<sexo>M</sexo>
+<urlWebsite/>
+<redeSocial>
+<redeSocial>https://twitter.com/acaciofavacho</redeSocial>
+<redeSocial>
+https://www.facebook.com/deputadofederalacaciofavacho
+</redeSocial>
+<redeSocial>
+https://www.instagram.com/acaciofavacho?ingshid=1cfkc9sryfucp
+</redeSocial>
+<redeSocial>
+https://youtube.com/channel/UCWNbptIjAriL2pt8H3W6CGw
+</redeSocial>
+</redeSocial>
+<dataNascimento>1983-09-28</dataNascimento>
+<dataFalecimento/>
+<ufNascimento>AP</ufNascimento>
+<municipioNascimento>Macapá</municipioNascimento>
+<escolaridade>Superior</escolaridade>
+</dados>
+<links>
+<link>
+<rel>self</rel>
+<href>
+https://dadosabertos.camara.leg.br/api/v2/deputados/204379
+</href>
+</link>
+</links>
+</xml>
+    */
+
+
+
+</script>

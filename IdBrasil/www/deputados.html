@@ -1,0 +1,65 @@
+<div id="app">
+
+	<div class="statusbar"></div>
+	<div class="view view-main">
+		<div data-name="verify_url" class="page">
+			<div class="navbar navbar-transparent">
+
+				<div class="navbar-inner sliding">
+					<div class="left">
+						<a href="#" class="link back">
+							<i class="material-icons">arrow_back</i>
+						</a>
+
+					</div>
+					<div class="title">
+						Lista de deputados</div>
+				</div>
+			</div>
+			<div class="page-content ptr-content" style="background:#e6e6e6">
+				<div class="ptr-preloader">
+					<div class="preloader"></div>
+					<div class="ptr-arrow"></div>
+				</div>
+
+
+				<img class="img-responsive img-content"
+					src="https://www.camara.leg.br/midias/image/2022/08/img20220802153830056.jpg">
+
+				<p class="text-center block">
+					Retorna uma lista de dados básicos sobre deputados que estiveram em exercício parlamentar em algum intervalo de tempo.
+				</p>
+				<div class="list list-strong-ios list-dividers-ios inset-ios">
+					<ul>
+						<li class="item-content item-input">
+							<div class="item-inner">
+								<div class=" item-label">Nome</div>
+								<div class="item-input-wrap">
+									<input type="text" placeholder="Nome" id="input_search_deputado">
+									<span class="input-clear-button"></span>
+								</div>
+							</div>
+						</li>
+						<button class="button button-tonal" id="btt_deputado_search" onclick="
+						getDeputados()">Pesquisar</button>
+
+					</ul>
+				</div>
+
+
+				<div class="block">
+					<div class="list" id="result_deputados">
+						<ul>
+							<!-- Informações serão adicionadas aqui via JS -->
+						</ul>
+					</div>
+				</div>
+
+				
+
+
+
+			</div>
+		</div>
+	</div>
+</div>
