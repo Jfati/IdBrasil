@@ -16,6 +16,12 @@ Ao abrir o aplicativo, você será apresentado a um menu que permite acessar as 
 
 Para cada funcionalidade, o aplicativo faz uma chamada à API correspondente para recuperar as informações relevantes e apresentá-las ao usuário.
 
+## Imagens
+![Alt Text](Imagens/Screenshot%202023-05-08%20at%2015-58-41%20AppPrefab.png)
+![Alt Text](Imagens/Screenshot%202023-05-08%20at%2015-58-56%20AppPrefab.png)
+![Alt Text](Imagens/Screenshot%202023-05-08%20at%2015-59-22%20AppPrefab.png)
+![Alt Text](Imagens/Screenshot%202023-05-08%20at%2016-02-42%20AppPrefab.png)
+
 ## Contribuição
 
 Este projeto é restrito para um grupo fechado de desenvolvedores que têm acesso para atualizar o código-fonte e as funcionalidades do aplicativo. Caso você deseje contribuir, entre em contato com o administrador do projeto.
