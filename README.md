@@ -8,7 +8,7 @@ O aplicativo foi desenvolvido usando Cordova, HTML, JS e CSS, com o framework7. 
 
 ## Instalação
 
-Para instalar o aplicativo, baixe o código-fonte do repositório e execute o comando `cordova build android` na pasta raiz do projeto. Em seguida, conecte seu dispositivo Android ao computador e execute o comando `cordova run android` para instalar e executar o aplicativo.
+Para instalar o aplicativo, baixe o código-fonte do repositório. Instale o cordova usando npm. ` npm install cordova`. Execute o comando `cordova build android` ou `cordova build browser` para iniciar via browser na pasta raiz do projeto. Em seguida, conecte seu dispositivo Android ao computador e execute o comando `cordova run android` com o usb conectado e modo de depuração ativado. Caso queira iniciar no browser ` cordova run browser` para executar o aplicativo.
 
 ## Uso
 
