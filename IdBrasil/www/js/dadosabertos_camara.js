@@ -333,9 +333,17 @@ function GetPartido(id) {
       id_lider = id_lider.replace("https://dadosabertos.camara.leg.br/api/v2/deputados/", "");
 
 
-      $("#btt_lider").click(function () {
-        
+      $("#btt_lider").click(function (e) {
+        e.preventDefault();
         app.views.main.router.navigate('/deputado/' + id_lider);
+      })
+
+      let id_partido = id;
+
+      $("#btt_membros").click(function (e) {
+        e.preventDefault();
+
+        app.views.main.router.navigate('/partido_list_members/' + id);
       })
     },
     error: function (error) {
@@ -357,4 +365,59 @@ function GetMembrosPartido(id) {
       console.log("Ocorreu um erro ao obter os membros do partido.");
     }
   });
+}
+
+function getDeputadosPartido(partido) {
+  let nome = $("#input_search_deputado").val() || "";
+  app.preloader.show();
+  // URL da API com os parâmetros necessários
+  var url = "https://dadosabertos.camara.leg.br/api/v2/partidos/" + partido + "/membros";
+
+  // Requisição Ajax usando o método GET
+  $.ajax({
+    url: url,
+    type: "GET",
+    dataType: "json",
+
+    error: function () {
+      // Caso ocorra um erro na requisição Ajax, exibe uma mensagem de erro
+    },
+  }).done(function (data) {
+    console.log(data.dados);
+
+    // Variável para armazenar o HTML a ser adicionado
+    var html = "";
+
+    $("#partido_nome").text(data.dados.nome);
+
+    // Loop para iterar sobre os elementos da tag <dados>
+
+    for (let i = 0; i < data.dados.length; i++) {
+      const element = data.dados[i];
+      console.log(element);
+
+      let nome = element.nome;
+      let partido = element.siglaPartido;
+      let uf = element.siglaUf;
+      let foto = element.urlFoto;
+      let id_deputado = element.id;
+      html += '<li><a class="link" href="/deputado/' + id_deputado + '">';
+      html += '<div class="item-content">';
+      html += '<div class="item-media"><img src="' + foto + '" class="img_result_deputado"></div>';
+      html += '<div class="item-inner">';
+      html += '<div class="item-title">' + nome + '</div>';
+      html += '<div class="item-after">' + partido + ' - ' + uf + '</div>';
+      html += '</div>';
+      html += '</div></a>';
+      html += '</li>';
+    }
+
+
+    // Adiciona o HTML gerado à página
+    $("#result_deputados_list_members ul").html(html);
+    app.preloader.hide();
+  }).fail(function (xhr, status, error) {
+    console.log(xhr, status, error);
+    app.dialog.alert("Ocorreu um erro ao carregar os dados.");
+  })
 }

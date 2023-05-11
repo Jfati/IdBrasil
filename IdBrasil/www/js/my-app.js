@@ -81,6 +81,16 @@ var app = new Framework7({
 			}
 		},
 		{
+			path: '/partido_list_members/:id',
+			url: 'partido_list_members.html',
+			on: {
+				pageInit: function (event, page) {
+					var id_partido = page.route.params.id;
+					getDeputadosPartido(id_partido);
+				}
+			}
+		},
+		{
 			path: '/eventos_legislativos_camera/',
 			url: 'eventos_legislativos_camera.html',
 			on: {
